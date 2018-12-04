@@ -1,21 +1,19 @@
 package team.code.perfect.firebase_notification;
 
-
-import android.app.job.JobService;
 import android.content.Context;
+import com.firebase.jobdispatcher.JobParameters;
+import com.firebase.jobdispatcher.JobService;
 
+public class MyJobService extends JobService {
 
-public class MyJobService extends JobService{
-    final Context context = this;
-    private static final String TAG="MyJobService";
+  private static final String TAG = "MyJobService";
+  final Context context = this;
 
-    @Override
-    public boolean onStartJob(android.app.job.JobParameters params) {
-        return false;
-    }
+  @Override public boolean onStartJob(JobParameters job) {
+    return false;
+  }
 
-    @Override
-    public boolean onStopJob(android.app.job.JobParameters params) {
-        return false;
-    }
+  @Override public boolean onStopJob(JobParameters job) {
+    return false;
+  }
 }
